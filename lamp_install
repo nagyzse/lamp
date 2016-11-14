@@ -1,0 +1,18 @@
+sudo apt-get update
+sudo apt-get upgrade
+
+sudo apt-get install apache2
+#service apache2 status
+sudo apt-get install mysql-server mysql-client
+#service mysql status
+
+sudo apt-get install php7.0 php7.0-mysql php7.0-curl php7.0-json php7.0-cgi libapache2-mod-php7.0 php-mbstring php7.0-mbstring php-gettext
+#php -v
+echo $'<?php\nphpinfo();\n?>' > /var/www/html/test.php
+sudo service apache2 restart
+
+sudo apt-get install phpmyadmin
+echo 'Include /etc/phpmyadmin/apache.conf' >> /etc/apache2/apache2.conf
+sudo service apache2 restart
+
+
